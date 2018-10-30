@@ -134,6 +134,7 @@ function concatenate(path, callback) {
         return;
     }
     let filename = node.name;
+	alert(filename)
     if (filename.includes('.md')) {
         $.ajax({
             url: window.location.origin + '/markdowns/' + filename.replace('.', '') + '.html',
