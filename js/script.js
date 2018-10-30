@@ -103,9 +103,9 @@ function styleTerminal() {
 function printTopBlock() {
 	printLine('<span >Windows PowerShell</span>')
 	printLine('<span >Copyright (C) 2009 Microsoft Corporation. Alle Rechte vorbehalten.</span>')
-	printLine('<span ></span>')
-	printLine('<span >PS C:\Windows\System32\WindowsPowerShell\v1.0> cd C:\Administrator\Portfolio\~</span>')
-	printLine('<span >PS C:\Administrator\Portfolio\~ type ~/introduction.md</span>')
+	printLine('<span ><br></span>')
+	printLine('<span >PS C:\\Windows\\System32\\WindowsPowerShell\\v1.0> cd C:\\Administrator\\Portfolio\\~</span>')
+	printLine('<span >PS C:\\Administrator\\Portfolio\\~ type ~/introduction.md</span>')
     printLine('<span >==================</span>');
     printLine('<span class="green">&nbsp;Tobias Nöthlich</span>');
     printLine('<span>==================</span>');
