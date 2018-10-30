@@ -127,6 +127,8 @@ function changeDirectory(path) {
  * @param callback: the action to perform after displaying the file
  */
 function concatenate(path, callback) {
+	alert(path)
+	alert(path.replace(/\\/g,"/"))
     let node = nodeFrom(path.replace(/\\/g,"/"));
     if (node === undefined || node.type === 'folder') {
         badCommand();
