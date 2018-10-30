@@ -144,11 +144,11 @@ function takeInput() {
  */
 function processInput(input) {
     
-	input.replace(/\\/g,"/")
+	input = input.replace(/\\/g,"/")
 	let $last = $terminal.find('div').find('p').find('div').last();
     $last.html(getPrompt() + $last.html());
 
-	alert(input)
+
     let helpRe = /^help$/;
     let clearRe = /^cls$/;
     let exitRe = /^exit$/;
