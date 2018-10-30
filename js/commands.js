@@ -108,7 +108,7 @@ function list() {
  * @param path: the location of the directory to switch to
  */
 function changeDirectory(path) {
-    let nextNode = nodeFrom(path);
+    let nextNode = nodeFrom(path.replace(/\\/g,"/"));
     if (nextNode === undefined || nextNode.type === 'file') {
         badCommand();
         return;
@@ -127,7 +127,7 @@ function changeDirectory(path) {
  * @param callback: the action to perform after displaying the file
  */
 function concatenate(path, callback) {
-    let node = nodeFrom(path);
+    let node = nodeFrom(path.replace(/\\/g,"/"));
     if (node === undefined || node.type === 'folder') {
         badCommand();
         callback();
