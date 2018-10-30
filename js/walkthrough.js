@@ -1,9 +1,9 @@
 function changeDirectoryWalkthrough(dirname) {
-    typeText('cd ' + dirname.replace("/","\\"), focus);
+    typeText('cd ' + dirname.replace(/\//g,"\\"), focus);
 }
 
 function concatenateWalkthrough(filename) {
-    typeText('type ' + filename.replace("/","\\"), focus);
+    typeText('type ' + filename.replace(/\//g,"\\"), focus);
 }
 
 function listWalkthrough() {
