@@ -152,7 +152,7 @@ function processInput(input) {
     let listRe = /^dir$/;
     let treeRe = /^tree$/;
     let changeDirectoryRe = /^cd\s[~]?[a-zA-Zé\/.\-_]*$/;
-    let concatenateRe = /^type\s[~]?[a-zA-Zé\\.()\-_↵\s]+$/;
+    let concatenateRe = /^type\s[~]?[a-zA-Zé\/.()\-_↵\s]+$/;
 
     let commandType;
     if (helpRe.test(input)) {
@@ -165,9 +165,9 @@ function processInput(input) {
         commandType = 'list';
     } else if (treeRe.test(input)) {
         commandType = 'tree';
-    } else if (changeDirectoryRe.test(input)) {
+    } else if (changeDirectoryRe.test(input.replace(/\\/g,"/"))) {
         commandType = 'changeDirectory';
-    } else if (concatenateRe.test(input)) {
+    } else if (concatenateRe.test(input).replace(/\\/g,"/")) {
         commandType = 'concatenate';
     } else {
         commandType = 'badCommand';
