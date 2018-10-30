@@ -143,7 +143,9 @@ function takeInput() {
  * @param input: the entered commands
  */
 function processInput(input) {
-    let $last = $terminal.find('div').find('p').find('div').last();
+    
+	input.replace(/\\/g,"/")
+	let $last = $terminal.find('div').find('p').find('div').last();
     $last.html(getPrompt() + $last.html());
 
     let helpRe = /^help$/;
@@ -165,9 +167,9 @@ function processInput(input) {
         commandType = 'list';
     } else if (treeRe.test(input)) {
         commandType = 'tree';
-    } else if (changeDirectoryRe.test(input.replace(/\\/g,"/"))) {
+    } else if (changeDirectoryRe.test(input)) {
         commandType = 'changeDirectory';
-    } else if (concatenateRe.test(input).replace(/\\/g,"/")) {
+    } else if (concatenateRe.test(input)) {
         commandType = 'concatenate';
     } else {
         commandType = 'badCommand';
