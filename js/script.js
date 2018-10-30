@@ -152,7 +152,7 @@ function processInput(input) {
     let listRe = /^dir$/;
     let treeRe = /^tree$/;
     let changeDirectoryRe = /^cd\s[~]?[a-zA-Zé\/.\-_]*$/;
-    let concatenateRe = /^type\s[~]?[a-zA-Zé\/.()\-_↵\s]+$/;
+    let concatenateRe = /^type\s[~]?[a-zA-Zé\\.()\-_↵\s]+$/;
 
     let commandType;
     if (helpRe.test(input)) {
