@@ -192,7 +192,7 @@ function processInput(input) {
             changeDirectory(input.substring(3));
             break;
         case 'concatenate':
-            concatenate(input.substring(4), takeInput);
+            concatenate(input.substring(5), takeInput);
             return;
         case 'badCommand':
             badCommand();
