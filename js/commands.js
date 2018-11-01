@@ -154,7 +154,7 @@ function concatenate(path, callback) {
     let filename = node.name;
     if (filename.includes('.md')) {
         $.ajax({
-            url: window.location.origin + '/markdowns/' + filename.replace('.', '') + '.html',
+            url: window.location.origin + '/markdowns/' + filename.replace('.', '') + global +'.html',
             method: 'GET',
             cache: false,
             success: [
@@ -171,7 +171,7 @@ function concatenate(path, callback) {
             ]
         });
     } else if (filename.includes('.pdf')) {
-        window.open(window.location.origin + '/pdf/' + filename);
+        window.open(window.location.origin + '/pdf/' + filename + global);
         callback();
     }
 }
