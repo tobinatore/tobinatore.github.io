@@ -15,5 +15,10 @@ function helpWalkthrough() {
 }
 
 function changeLanguageWalkthrough(locale) {
-	typeText('Set-WinSystemLocale ' + locale, focus);
+	if(locale == 1){
+		typeText('Set-WinSystemLocale en-US', focus);
+	}
+	else {
+		typeText('Set-WinSystemLocale de-DE', focus);
+	}
 }
