@@ -13,3 +13,7 @@ function listWalkthrough() {
 function helpWalkthrough() {
     typeText('help', focus);
 }
+
+function changeLanguageWalkthrough(locale) {
+	typeText('Set-WinSystemLocale ' + locale, focus);
+}

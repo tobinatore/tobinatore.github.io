@@ -54,17 +54,34 @@ function updateAllowedCommands() {
  * Display the various commands and in the tooltip, their functions
  */
 function help() {
-    printLine('The following commands work. Hover over them for more information.');
-    printLine('' +
-        ' <span class="yellow" title="Explains the commands">help</span>,' +
-        ' <span class="yellow" title="Clears the screen">cls</span>,' +
-        ' <span class="yellow" title="List all the files in this directory">dir</span>,' +
-        ' <span class="yellow" title="List all links on the website">tree</span>,' +
-        ' <span class="yellow" title="Change directory to `dirname`">cd </span>' +
-        '<span class="blue" title="Change directory to `dirname`"><em>dirname</em></span>,' +
-        ' <span class="yellow" title="Show the contents of `filename`">type </span>' +
-        '<span class="green" title="Show the contents of `filename`"><em>filename</em></span>'
-    );
+    if(global == 'en-US'){
+		printLine('This site is available in the following languages: <a class="yellow" onclick="changeLanguageWalkthrough("en-US")">English</a> and <a class="yellow" onclick="changeLanguageWalkthrough("de-DE")">German</a>.');
+		printLine('The following commands work. Hover over them for more information.');
+		printLine('' +
+			' <span class="yellow" title="Explains the commands">help</span>,' +
+			' <span class="yellow" title="Clears the screen">cls</span>,' +
+			' <span class="yellow" title="List all the files in this directory">dir</span>,' +
+			' <span class="yellow" title="List all links on the website">tree</span>,' +
+			' <span class="yellow" title="Change directory to `dirname`">cd </span>' +
+			'<span class="blue" title="Change directory to `dirname`"><em>dirname</em></span>,' +
+			' <span class="yellow" title="Show the contents of `filename`">type </span>' +
+			'<span class="green" title="Show the contents of `filename`"><em>filename</em></span>'
+		);
+	}
+	else {
+		printLine('Diese Website ist in den folgenden Sprachen verfügbar: <a class="yellow" onclick="changeLanguageWalkthrough("en-US")">Englisch</a> und <a class="yellow" onclick="changeLanguageWalkthrough("de-DE")">Deutsch</a>.');
+		printLine('Die folgenden Befehle können verwendet werden. Wenn man die Maus über einen Befehl bewegt, werden zusätzliche Informationen angezeigt.');
+		printLine('' +
+			' <span class="yellow" title="Erklärt die Befehle">help</span>,' +
+			' <span class="yellow" title="Löscht die bisherigen Ausgaben">cls</span>,' +
+			' <span class="yellow" title="Listet alle Dateien im momentanen Verzeichnis auf">dir</span>,' +
+			' <span class="yellow" title="Listet alle Links auf der Website auf">tree</span>,' +
+			' <span class="yellow" title="Wechselt in das Verzeichnis `dirname`">cd </span>' +
+			'<span class="blue" title="Wechselt in das Verzeichnis `dirname`"><em>dirname</em></span>,' +
+			' <span class="yellow" title="Zeigt den Inhalt der Datei `filename`">type </span>' +
+			'<span class="green" title="Zeigt den Inhalt der Datei `filename`"><em>filename</em></span>'
+		);
+	}
 }
 
 /**
