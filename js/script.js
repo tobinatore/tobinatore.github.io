@@ -15,6 +15,7 @@ let domParser = new DOMParser();
 let $terminal = $('#terminal');
 
 let separator = '&nbsp;&nbsp; ';
+let global = 'en-US'
 
 $(document).ready(documentReady);
 
@@ -156,6 +157,7 @@ function processInput(input) {
     let treeRe = /^tree$/;
     let changeDirectoryRe = /^cd\s[~]?[a-zA-Zé\/.\-_]*$/;
     let concatenateRe = /^type\s[~]?[a-zA-Zé\/.()\-_↵\s]+$/;
+	let setLocal = /^Set-WinSystemLocale\s[de][en]-[UD][SE]/
 
     let commandType;
     if (helpRe.test(input)) {

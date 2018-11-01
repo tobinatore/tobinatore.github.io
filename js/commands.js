@@ -159,7 +159,10 @@ function concatenate(path, callback) {
     }
 }
 
-
+function setLocale(locale) {
+	global = locale
+	alert(global)
+}
 /**
  * If the command is invalid, say so and link to the help command if needed
  */
