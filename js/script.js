@@ -157,7 +157,7 @@ function processInput(input) {
     let treeRe = /^tree$/;
     let changeDirectoryRe = /^cd\s[~]?[a-zA-Zé\/.\-_]*$/;
     let concatenateRe = /^type\s[~]?[a-zA-Zé\/.()\-_↵\s]+$/;
-	let setLocal = /^Set-WinSystemLocale\s[de][en]-[UD][SE]/
+	let setLocalRe = /^Set-WinSystemLocale\s[de][en]-[UD][SE]/
 
     let commandType;
     if (helpRe.test(input)) {
@@ -174,6 +174,8 @@ function processInput(input) {
         commandType = 'changeDirectory';
     } else if (concatenateRe.test(input)) {
         commandType = 'concatenate';
+	} else if (setLocalRe.test(input)) {
+        commandType = 'setLocale';
     } else {
         commandType = 'badCommand';
     }
@@ -203,6 +205,9 @@ function processInput(input) {
             break;
         case 'concatenate':
             concatenate(input.substring(5), takeInput);
+            return;
+		case 'setLocale':
+            setLocale(input.substring(20));
             return;
         case 'badCommand':
             badCommand();
