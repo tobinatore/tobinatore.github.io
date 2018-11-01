@@ -161,7 +161,7 @@ function concatenate(path, callback) {
 
 function setLocale(locale) {
 	global = locale
-	takeInput()
+	window.location.reload(true);
 }
 /**
  * If the command is invalid, say so and link to the help command if needed
