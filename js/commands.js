@@ -160,7 +160,7 @@ function concatenate(path, callback) {
 }
 
 function setLocale(locale) {
-	global = locale
+	setCookie('locale',locale,1);
 	window.location.reload(true);
 }
 /**
@@ -168,4 +168,11 @@ function setLocale(locale) {
  */
 function badCommand() {
     printLine('Bad command. See <a class="yellow" onclick="helpWalkthrough()">help</a> or use the links to browse.');
+}
+
+function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+ d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
