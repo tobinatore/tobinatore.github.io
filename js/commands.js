@@ -55,7 +55,7 @@ function updateAllowedCommands() {
  */
 function help() {
     if(global == 'en-US'){
-		printLine('This site is available in the following languages: <a class="yellow" onclick="changeLanguageWalkthrough(en-US)">English</a> and <a class="yellow" onclick="changeLanguageWalkthrough(de-DE)">German</a>.');
+		printLine('This site is available in the following languages: <a class="yellow" onclick="changeLanguageWalkthrough(' + 'en-US' +')">English</a> and <a class="yellow" onclick="changeLanguageWalkthrough(' + 'de-DE' +')">German</a>.');
 		printLine('The following commands work. Hover over them for more information.');
 		printLine('' +
 			' <span class="yellow" title="Explains the commands">help</span>,' +
@@ -69,7 +69,7 @@ function help() {
 		);
 	}
 	else {
-		printLine('Diese Website ist in den folgenden Sprachen verfügbar: <a class="yellow" onclick="changeLanguageWalkthrough(en-US)">Englisch</a> und <a class="yellow" onclick="changeLanguageWalkthrough(de-DE)">Deutsch</a>.');
+		printLine('Diese Website ist in den folgenden Sprachen verfügbar: <a class="yellow" onclick="changeLanguageWalkthrough(' + 'en-US' +')">Englisch</a> und <a class="yellow" onclick="changeLanguageWalkthrough(' + 'de-DE' +')">Deutsch</a>.');
 		printLine('Die folgenden Befehle können verwendet werden. Wenn man die Maus über einen Befehl bewegt, werden zusätzliche Informationen angezeigt.');
 		printLine('' +
 			' <span class="yellow" title="Erklärt die Befehle">help</span>,' +
