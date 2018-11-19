@@ -54,7 +54,7 @@ function updateAllowedCommands() {
  * Display the various commands and in the tooltip, their functions
  */
 function help() {
-    if(global == 'en-US'){
+    if(global == 'en-US' || global == ""){
 		printLine('This site is available in the following languages: <a class="yellow" onclick="changeLanguageWalkthrough(1)">English</a> and <a class="yellow" onclick="changeLanguageWalkthrough(2)">German</a>.');
 		printLine('The following commands work. Hover over them for more information.');
 		printLine('' +
