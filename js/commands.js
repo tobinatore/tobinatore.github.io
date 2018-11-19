@@ -151,6 +151,12 @@ function concatenate(path, callback) {
         callback();
         return;
     }
+	
+	if(global == "")
+	{
+		global = "en-US";
+	}
+	
     let filename = node.name;
     if (filename.includes('.md')) {
         $.ajax({
