@@ -112,6 +112,8 @@ function printTopBlock() {
 		printLine('<span class="green">&nbsp;Tobias Nöthlich</span>');
 		printLine('<span>==================</span>');
 		printLine('<strong>software developer and student @ TU Dresden</strong>');
+		printLine('This site sets a cookie to store your language settings, by continuing to use this site you agree with this.');
+		printLine('The cookie expires after one (1) day.');
 		printLine('<br>');
 		help();
 		printLine('<br>');
@@ -128,6 +130,8 @@ function printTopBlock() {
 		printLine('<span class="green">&nbsp;Tobias Nöthlich</span>');
 		printLine('<span>==================</span>');
 		printLine('<strong>Softwareentwickler und Student an der TU Dresden</strong>');
+		printLine('Diese Seite setzt ein Cookie um Ihre Spracheinstellung zu speichern. Bei weiterer Benutzung erklären Sie sich damit einverstanden.');
+		printLine('Das Cookie verfällt nach einem (1) Tag.');
 		printLine('<br>');
 		help();
 		printLine('<br>');
